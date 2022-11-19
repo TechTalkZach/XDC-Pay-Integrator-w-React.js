@@ -61,6 +61,9 @@ const Web3ModalProvider = ({ children }) => {
     // Clear web3, account & chainId objects in case
     // account changes, disconnection or Chain switch
     const resetWeb3 = useCallback(() => {
+        setWeb3(null);
+        setAccount(null);
+        setChainId(null);
 
     }, []);
 
