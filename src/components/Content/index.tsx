@@ -20,6 +20,7 @@ const Content: React.FC = () => {
   const getBalance = async () => {
     if(web3 && account){
       const balance = await web3?.eth.getBalance(account);
+      console.log(balance)
       // balance => transform from 18 decimal to readable format
       setMyBalance(web3?.utils.fromWei(balance, "ether"));
     } else {
